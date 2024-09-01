@@ -1,4 +1,7 @@
-import {sqaureNumber} from "./map";
+import {sqaureNumber} from './map';
+import {filterLongWords} from './filter';
+import {printFruits} from './forEach';
+import {sliceString} from './slice';
 
 console.log('Try npm run lint/fix!');
 
@@ -34,6 +37,29 @@ export function doSomeStuff(
 }
 // TODO: more examples
 
-const numbers = [2,4,6,8];
-
+//Sample data for map.ts
+const numbers = [16, 5, 8, 6];
 console.log(sqaureNumber(numbers));
+
+// Sample data for filter.ts
+const words: string[] = ['welcome', 'a', 'board', 'everyone', 'hekhok'];
+const minLength = 5;
+
+const longWords: string[] = filterLongWords(words, minLength);
+
+console.log(longWords);
+
+// Sample data for forEach.ts
+const fruits: string[] = [
+  'Dragonfruit',
+  'Raspberry',
+  'Watermelon',
+  'Blueberry',
+  'Banana',
+];
+printFruits(fruits);
+
+// Sample data for slice.ts
+const str = 'hatdog';
+const slicedHatdog: string = sliceString(str, 0, 3);
+console.log(slicedHatdog);
